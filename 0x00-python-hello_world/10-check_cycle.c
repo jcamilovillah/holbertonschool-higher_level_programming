@@ -6,7 +6,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *i, *j;
+	listint_t *player1, *player2;
 
 	player1 = list;
 	player2 = list;
