@@ -1,2 +1,2 @@
 #!/bin/bash
-print("Holberton School: {}".format(88+10)) > python3
+$PYCODE > python3
