@@ -6,16 +6,16 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *player1, *player2;
+	listint_t *x, *z;
 
-	player1 = list;
+	x = list;
 	player2 = list;
 
-	while (player1 != NULL && player2 != NULL && player2->next != NULL && player1->next != NULL)
+	while (x != NULL && z != NULL && z->next != NULL && x->next != NULL)
 	{
-		player1 = player1->next;
-		player2 = player2->next->next;
-		if (player1 == player2)
+		x = x->next;
+		z = z->next->next;
+		if (x == z)
 		{
 			return (1);
 		}
