@@ -3,4 +3,4 @@ def raise_exception_msg(message=""):
     try:
         print(1/0)
     except ZeroDivisionError:
-        print("C is fun")
+        print(message)
