@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def raise_exception_msg(message=""):
     try:
-        print("C is fun")
-    except NameError:
+        print(1/0)
+    except ZeroDivisionError:
         print("C is fun")
