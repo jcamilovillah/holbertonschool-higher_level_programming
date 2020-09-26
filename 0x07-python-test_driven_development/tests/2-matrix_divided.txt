@@ -1,0 +1,69 @@
+The ``2-matrix_divided`` module
+============================
+
+Using ``matrix_divided``
+---------------------
+Checking docstring for module:
+        >>> __import__('2-matrix_divided').__doc__ != None
+        True
+
+Import ``matrix_divided` from the ``2-matrix_divided`` module:
+        >>> matrix_divided= __import__('2-matrix_divided').matrix_divided
+
+Check docstring for function:
+        >>> len(matrix_divided.__doc__) > 0
+        True
+
+Check docstring for function:
+>>> matrix_divided([[3, 5, 7]], 3)
+[[1.0, 1.67, 2.33]]
+
+>>> matrix_divided([[3, 5, 7], [1]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided(3, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[3, 5, 7]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided([["hola", "Danna", "Maria"]], 4)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([], 4)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[3, 5, 7]], float('inf'))
+[[0.0, 0.0, 0.0]]
+
+>>> matrix_divided([[3, 5, 7]], float('nan'))
+[[nan, nan, nan]]
+
+>>> matrix_divided([[3, 5, 7]], "hello")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided([[7]], 7)
+[[1.0]]
+
+>>> matrix_divided([[float('inf')]], float('inf'))
+[[nan]]
+
+>>> matrix_divided([[float('inf'), 3, 3]], 3)
+[[inf, 1.0, 1.0]]
+
+>>> matrix_divided([[3, 5, 7]], -5)
+[[-0.6, -1.0, -1.4]]
+
+>>> matrix_divided()
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided([[2, 6, 10], [4, 8,12]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
