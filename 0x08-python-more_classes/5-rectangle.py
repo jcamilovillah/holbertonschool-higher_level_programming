@@ -61,7 +61,7 @@ class Rectangle:
     def __repr__(self):
         """print2"""
         return 'Rectangle(%d, %d)' % (self.__width, self.__height)
-    
-    def  __del__( self ): 
+
+    def __del__(self):
         """del method"""
         print("Bye rectangle...")
