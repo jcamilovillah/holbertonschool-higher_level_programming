@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def magic_string():
-    n = 9
-    for i in range(n):
-        print("Holberton")
+    count = 0
+    if hasattr(magic_string, 'n'):
+        count = getattr(magic_string, "n")
+    setattr(magic_string, "n", count)
+    return "Holberton" * magic_string.n
