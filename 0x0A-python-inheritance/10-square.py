@@ -20,23 +20,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     """Class Rectangle"""
 
-    def __init__(self, width, height):
-        """Instantiation"""
-        self.__width = width
-        self.__height = height
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-
-    def area(self):
-        """area"""
-        return self.__width * self.__height
-
-    def print(self):
-        """print"""
-        print("[Rectangle] {}/{}".format(self.__width, self.__height))
-
-    def __str__(self):
-        return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
