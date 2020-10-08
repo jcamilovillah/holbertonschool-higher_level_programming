@@ -4,14 +4,14 @@
 
 def pascal_triangle(n):
     """Pascal"""
-    n -= 1
+    empty = []
     if n <= 0:
-        return []
-    lista = [[1], [1, 1]]
+        return empty
+    pascaltri = [[1]]
     for i in range(1, n):
-        linea = [1]
-        for j in range(0, len(lista[i]) - 1):
-            linea.extend([lista[i][j] + lista[i][j+1]])
-        linea += [1]
-        lista.append(linea)
-    return lista
+        tmp = [1]
+        for j in range(1, i):
+            tmp.append(pascaltri[i - 1][j - 1] + pascaltri[i - 1][j])
+        tmp.append(1)
+        pascaltri.append(tmp)
+    return pascaltri
