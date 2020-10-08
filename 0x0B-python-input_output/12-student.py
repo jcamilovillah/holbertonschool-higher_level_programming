@@ -16,8 +16,8 @@ class Student:
         lis = {}
         if attrs is None:
             return self.__dict__
+
         for i, j in self.__dict__.items():
             if i in attrs:
                     lis[i] = j
         return lis
-
