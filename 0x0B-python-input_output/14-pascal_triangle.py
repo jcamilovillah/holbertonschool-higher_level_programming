@@ -6,8 +6,7 @@ def pascal_triangle(n):
     """Pascal"""
     n -= 1
     if n <= 0:
-        empty = []
-        return empty
+        return []
     lista = [[1], [1, 1]]
     for i in range(1, n):
         linea = [1]
