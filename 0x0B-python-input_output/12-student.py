@@ -14,9 +14,10 @@ class Student:
     def to_json(self, attrs=None):
         """dict"""
         lis = {}
-        if attrs:
-            for i, j in self.__dict__.items():
-                if i in attrs:
-                        lis[i] = j
-            return lis
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        for i, j in self.__dict__.items():
+            if i in attrs:
+                    lis[i] = j
+        return lis
+
