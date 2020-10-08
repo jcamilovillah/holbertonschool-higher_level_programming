@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""pacal triagle"""
+
+
 def pascal_triangle(n):
     """Pascal"""
     if n <= 0:
