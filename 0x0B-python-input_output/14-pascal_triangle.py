@@ -4,6 +4,7 @@
 
 def pascal_triangle(n):
     """Pascal"""
+    n -= 1
     if n <= 0:
         empty = []
         return empty
