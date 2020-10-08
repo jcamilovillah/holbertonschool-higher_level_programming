@@ -16,8 +16,7 @@ class Student:
         lis = {}
         if attrs:
             for i, j in self.__dict__.items():
-                for x in attrs:
-                    if i == x:
+                if i in attrs:
                         lis[i] = j
             return lis
         return self.__dict__
