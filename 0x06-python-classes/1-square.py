@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Class taht define as the point zero"""
+"""Class that define as the point zero"""
 
 
 class Square:
