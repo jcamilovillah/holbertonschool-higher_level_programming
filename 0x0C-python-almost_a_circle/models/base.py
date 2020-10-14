@@ -29,7 +29,7 @@ class Base():
         for i in list_objs:
             lis.append(i.to_dictionary())
         json = cls.to_json_string(lis)
-        with open(cls.__name__ + ".json", "w") as file:
+        with open(cls.__name__ + ".json", "w", encoding="utf-8") as file:
             if list_objs is None:
                 file.write("[]")
             else:
