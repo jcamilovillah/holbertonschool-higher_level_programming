@@ -7,7 +7,7 @@ class Rectangle(Base):
     """create a class called rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """init"""
+        """method init"""
         self.width = width
         self.height = height
         self.x = x
@@ -16,12 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """getter"""
+        """method getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter"""
+        """method setter"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,12 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """getter"""
+        """method getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter"""
+        """method setter"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -44,12 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """getter"""
+        """method getter"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """setter"""
+        """method setter"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,12 +58,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """getter"""
+        """method getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """setter"""
+        """method setter"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -71,11 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """area"""
+        """method area"""
         return self.__height * self.__width
 
     def display(self):
-        """display"""
+        """method display"""
         space = ""
         for y in range(self.__y):
             print()
@@ -88,13 +88,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """str"""
+        """method str"""
         return "[Rectangle] " + "(" + str(self.id) + ") "\
             + str(self.__x) + "/" + str(self.__y) + " - " +\
             str(self.__width) + "/" + str(self.__height)
 
     def update(self, *args, **kwargs):
-        """update"""
+        """method update"""
         if args:
             for i in range(len(args)):
                 if i == 0:
@@ -121,6 +121,6 @@ class Rectangle(Base):
                 self.__y = value
 
     def to_dictionary(self):
-        """dictionary"""
+        """method dictionary"""
         return dict(id=self.id, width=self.width,
                     height=self.height, x=self.x, y=self.y)
