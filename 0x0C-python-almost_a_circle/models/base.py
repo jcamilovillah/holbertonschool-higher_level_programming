@@ -47,11 +47,11 @@ class Base():
     def create(cls, **dictionary):
         """return instance"""
         if cls.__name__ == "Rectangle":
-            obj = cls(4, 5, 5, 4)
+            obj = cls(4, 5)
             obj.update(**dictionary)
             return obj
         else:
-            obj = cls(4, 5, 5, 4)
+            obj = cls(4)
             obj.update(**dictionary)
             return obj
 
