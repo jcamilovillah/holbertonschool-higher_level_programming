@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Comment Rectangle"""
+"""class Rectangle"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle class"""
+    """create a class called rectangle"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """init"""
