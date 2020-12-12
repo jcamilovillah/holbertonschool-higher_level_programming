@@ -17,3 +17,4 @@ if __name__ == "__main__":
     consulta = session.query(State).all()
     for instance in consulta:
         print("{}: {}".format(instance.id, instance.name))
+    session.close()

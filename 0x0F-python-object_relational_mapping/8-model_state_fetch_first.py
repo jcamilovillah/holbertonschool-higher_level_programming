@@ -16,3 +16,4 @@ if __name__ == "__main__":
     session = Session()
     consulta = session.query(State).first()
     print("{}: {}".format(consulta.id, consulta.name))
+    session.close()
