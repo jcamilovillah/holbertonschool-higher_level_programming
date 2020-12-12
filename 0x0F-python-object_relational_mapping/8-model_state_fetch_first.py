@@ -15,5 +15,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     consulta = session.query(State).first()
-    print("{}: {}".format(consulta.id, consulta.name))
+    if consulta:
+        print("{}: {}".format(consulta.id, consulta.name))
+    else:
+        print("Nothing")
     session.close()
