@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-import MySQLdb
-"""  
+
+""" SQL injections safe
 """
 
+
+import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":

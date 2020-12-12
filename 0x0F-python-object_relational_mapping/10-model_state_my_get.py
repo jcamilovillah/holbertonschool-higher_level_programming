@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" script that lists all State objects that contain the letter a
+""" prints the State object with the name passed as argument
 """
 from sys import argv
 from sqlalchemy import create_engine

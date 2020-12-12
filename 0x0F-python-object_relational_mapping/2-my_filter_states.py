@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import MySQLdb
-"""  lists all states with a name starting with N (upper N) 
+"""  lists all states with a name starting with N (upper N)
 """
 
 from sys import argv
@@ -15,8 +15,9 @@ if __name__ == "__main__":
 
     db = MySQLdb.connect(host=lc, port=3306, user=userr, passwd=passw, db=namd)
     cur = db.cursor()
-    exe = cur.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id;".format(match))
+    exe = cur.execute("SELECT * FROM states\
+        WHERE name = '{}' ORDER BY id;".format(match))
+    print(match)
     for x in cur.fetchall():
         print(x)
     db.close()
