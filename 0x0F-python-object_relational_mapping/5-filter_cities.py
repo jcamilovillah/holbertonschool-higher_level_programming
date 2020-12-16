@@ -19,11 +19,14 @@ if __name__ == "__main__":
     exe = cur.execute("SELECT cities.name FROM cities JOIN states\
                 ON cities.state_id = states.id\
                 WHERE states.name = %s ORDER BY cities.id;", (sta_nme,))
-    sep = ""
-    for row in cur.fetchall():
-        for col in row:
-            print("{}{}".format(sep, col), end="")
-            sep = ", "
-    print()
+    content = cur.fetchall()
+    i = 1
+    size = len(content)
+    for a in content:
+        if i != size:
+            print('{}, '.format(a[0]), end='')
+        else:
+            print(a[0])
+        i += 1
     db.close()
     cur.close()
