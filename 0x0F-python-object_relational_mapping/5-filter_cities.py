@@ -16,17 +16,14 @@ if __name__ == "__main__":
 
     db = MySQLdb.connect(host=lc, port=3306, user=userr, passwd=passw, db=namd)
     cur = db.cursor()
-    exe = cur.execute("SELECT cities.name FROM cities JOIN states\
-                ON cities.state_id = states.id\
-                WHERE states.name = %s ORDER BY cities.id;", (sta_nme,))
-    content = cur.fetchall()
-    i = 1
-    size = len(content)
-    for a in content:
-        if i != size:
-            print('{}, '.format(a[0]), end='')
-        else:
-            print(a[0])
-        i += 1
+    exe = cur.execute("""SELECT cities.name FROM states, cities
+                WHERE states.id = cities.state_id and
+                states.name = %s ORDER BY cities.id ASC""", (argv[4], ))
+    sep = ""
+    for row in cur.fetchall():
+        for col in row:
+            print("{}{}".format(sep, col), end="")
+            sep = ", "
+    print()
     db.close()
     cur.close()
