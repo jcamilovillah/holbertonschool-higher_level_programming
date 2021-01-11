@@ -16,4 +16,4 @@ if __name__ == "__main__":
     with urlopen(req) as response:
         cont = response.read()
         utf8 = cont.decode('utf-8')
-        print("Your email is: {}".format(utf8))
+        print(utf)
