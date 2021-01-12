@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""list 10 commits (from the most recent to oldest) of 
+"""list 10 commits (from the most recent to oldest) of
 the repository “rails” by the user “rails”
 """
 import requests
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     owner = sys.argv[2]
     response = requests.get(
         'https://api.github.com/repos/{}/{}/commits'.format(owner, repo))
-    
+
     commit = response.json()
     for i in range(10):
         print("{}: {}".format(
